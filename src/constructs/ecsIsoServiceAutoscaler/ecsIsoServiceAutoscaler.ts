@@ -98,7 +98,7 @@ export class EcsIsoServiceAutoscaler extends Construct {
       this,
       `${id}-EcsServiceScalingManager`,
       {
-        code: Code.fromAsset('./resources/ecsIsoServiceAutoscaler/'),
+        code: Code.fromAsset('./resources/constructs/ecsIsoServiceAutoscaler/'),
         handler: 'ecs_scaling_manager.handler',
         runtime: Runtime.PYTHON_3_7,
         role: props.role,

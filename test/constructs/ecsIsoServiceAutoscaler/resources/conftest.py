@@ -17,9 +17,9 @@ def boto3_ecs_service_response(request) -> Dict[str, Any]:
     return {
         "services": [
             {
-                "serviceArn": "arn:aws:ecs:us-east-1:123456789012:service/MR-Infra-MRCluster535D1A46-2okCNvnaxoaU/MR-Task-MRService292C7250-9ncKQXCQxd5E",
-                "serviceName": "MR-Task-MRService292C7250-9ncKQXCQxd5E",
-                "clusterArn": "arn:aws:ecs:us-east-1:123456789012:cluster/MR-Infra-MRCluster535D1A46-2okCNvnaxoaU",
+                "serviceArn": "arn:aws:ecs:us-east-1:123456789012:service/Infra-Cluster/Task-Service",
+                "serviceName": "Task-Service",
+                "clusterArn": "arn:aws:ecs:us-east-1:123456789012:cluster/Infra-Cluster",
                 "loadBalancers": [],
                 "serviceRegistries": [],
                 "status": "ACTIVE",
@@ -27,7 +27,7 @@ def boto3_ecs_service_response(request) -> Dict[str, Any]:
                 "runningCount": 3,
                 "pendingCount": 0,
                 "launchType": "EC2",
-                "taskDefinition": "arn:aws:ecs:us-east-1:123456789012:task-definition/MRTaskMRTaskDefinition0707ECB5:8",
+                "taskDefinition": "arn:aws:ecs:us-east-1:123456789012:task-definition/TaskDefinition:N",
                 "deploymentConfiguration": {
                     "deploymentCircuitBreaker": {
                         "enable": False,
@@ -40,7 +40,7 @@ def boto3_ecs_service_response(request) -> Dict[str, Any]:
                     {
                         "id": "ecs-svc/3665271676139587657",
                         "status": "PRIMARY",
-                        "taskDefinition": "arn:aws:ecs:us-east-1:123456789012:task-definition/MRTaskMRTaskDefinition0707ECB5:8",
+                        "taskDefinition": "arn:aws:ecs:us-east-1:123456789012:task-definition/TaskDefinition:N",
                         "desiredCount": 3,
                         "pendingCount": 0,
                         "runningCount": 3,
@@ -56,7 +56,7 @@ def boto3_ecs_service_response(request) -> Dict[str, Any]:
                     {
                         "id": "b1dc4b42-5562-471e-93d0-e4683e18b5b3",
                         "createdAt": datetime.datetime(2022, 4, 21, 4, 0, 17, 762000, tzinfo=tzlocal()),
-                        "message": "(service MR-Task-MRService292C7250-9ncKQXCQxd5E) has reached a steady state."
+                        "message": "(service Task-Service) has reached a steady state."
                     },
                 ],
                 "createdAt": datetime.datetime(2022, 4, 15, 11, 0, 32, 707000, tzinfo=tzlocal()),
@@ -89,8 +89,8 @@ def boto3_cw_alarm_response() -> Dict[str, Any]:
         "CompositeAlarms": [],
         "MetricAlarms": [
             {
-                "AlarmName": "MR-Task-EcsScalingAlarm61D4C776-93VGP1UMJQ4A",
-                "AlarmArn": "arn:aws:cloudwatch:us-east-1:123456789012:alarm:MR-Task-EcsScalingAlarm61D4C776-93VGP1UMJQ4A",
+                "AlarmName": "Task-EcsScalingAlarm",
+                "AlarmArn": "arn:aws:cloudwatch:us-east-1:123456789012:alarm:Task-EcsScalingAlarm",
                 "AlarmConfigurationUpdatedTimestamp": datetime.datetime(2022,
                     4,
                     15,

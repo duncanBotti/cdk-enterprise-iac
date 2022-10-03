@@ -17,7 +17,7 @@ mkdir -p ${staging}
 cd ${staging}
 
 # copy src and overlay with test
-cp -f ${scriptdir}/../../../resources/ecsIsoServiceAutoscaler/* $PWD
+cp -f ${scriptdir}/../../../../resources/constructs/ecsIsoServiceAutoscaler/* $PWD
 cp -f ${scriptdir}/* $PWD
 
 # this will run our tests inside the right environment

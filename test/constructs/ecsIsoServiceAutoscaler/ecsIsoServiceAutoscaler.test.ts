@@ -14,16 +14,15 @@ import {
   FargateTaskDefinition,
 } from 'aws-cdk-lib/aws-ecs';
 import { Role, ServicePrincipal } from 'aws-cdk-lib/aws-iam';
-import { EcsIsoServiceAutoscaler } from '../../src/constructs/ecsIsoServiceAutoscaler';
+import { EcsIsoServiceAutoscaler } from '../../../src/constructs/ecsIsoServiceAutoscaler/ecsIsoServiceAutoscaler';
 
 let stack: Stack;
 
 describe('Python Lambda function tests', () => {
   test('lambda python pytest', () => {
-    const result = spawnSync(
-      path.join(__dirname, 'ecsIsoServiceAutoscaler', 'test.sh'),
-      { stdio: 'inherit' }
-    );
+    const result = spawnSync(path.join(__dirname, 'resources', 'test.sh'), {
+      stdio: 'inherit',
+    });
     expect(result.status).toBe(0);
   });
 });
